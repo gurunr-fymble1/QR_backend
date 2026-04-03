@@ -12,8 +12,8 @@ class StatusUpdate(BaseModel):
     day_id: str
     status: str
 
-
 app = APIRouter(prefix="/booking-msg")
+
 
 @app.get("/daily-passes")
 async def get_daily_passes(db: AsyncSession = Depends(get_db)):
